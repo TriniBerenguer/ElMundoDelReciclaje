@@ -1,29 +1,16 @@
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 .background {
-  background: url(img/maxresdefault.png);
+  background: url(img/background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-  width: 100%;
   height: 100vh;
 }
 
 .character {
-  background-image: url("img/35.png");
+  background-image: url("img/bin.png");
   width: 59px;
   height: 86px;
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
 }
 
@@ -31,4 +18,20 @@ html {
   font-size: 40px;
   padding: 10px;
   background-color: white;
+}
+
+.element{
+  background-image: url("img/1.png");
+  width: 59px;
+  height: 86px;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  animation: drop 4s linear forwards;
+  animation-iteration-count:infinite;
+}
+
+@keyframes drop{
+  from {top: -10%}
+  to {top: 85%}
 }

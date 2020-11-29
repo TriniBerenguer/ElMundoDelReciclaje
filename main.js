@@ -1,22 +1,23 @@
-var leftValue = (screen.availWidth)/2 , move = 35, direction = '35'
+const backgroundWidth = document.getElementById("background").offsetWidth
+let leftValue = backgroundWidth/2
+let verticalPosition = 0
+const moveElement = 10
+const move = 35
 
 document.onkeydown = function(e){
-    console.log(e.key);
-
-
-    if(e.key == 'ArrowRight'){
-        leftValue = leftValue + move;
-        document.getElementById('character').style.left = leftValue+"px";
-        direction = '35'
-    }
-
-    else if(e.key == 'ArrowLeft'){
-        leftValue = leftValue - move;
-        document.getElementById('character').style.left = leftValue+"px";
-        direction = '35'
-    }
-
-    document.getElementById('character').style.backgroundImage = "url('img/"+direction+".png')";
+  if(e.key == 'ArrowRight' && leftValue < backgroundWidth - 86) {
+    leftValue = leftValue + move;
+    document.getElementById('character').style.left = leftValue+"px";
+  } else if(e.key == 'ArrowLeft' && leftValue > 0) {
+    leftValue = leftValue - move;
+    document.getElementById('character').style.left = leftValue+"px";
+  } else if(e.key == 'ArrowUp') {
+    verticalPosition = verticalPosition - moveElement;
+    document.getElementById('element').style.top = verticalPosition+"px";
+  } else if(e.key == 'ArrowDown') {
+    verticalPosition = verticalPosition + moveElement;
+    document.getElementById('element').style.top = verticalPosition+"px";
+  }
 
 }
 
