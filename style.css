@@ -14,19 +14,11 @@
   left: 50%;
 }
 
-.key {
-  font-size: 40px;
-  padding: 10px;
-  background-color: white;
-}
-
 .element{
-  background-image: url("img/1.png");
   width: 59px;
   height: 86px;
   position: absolute;
   top: -10%;
-  left: 50%;
   animation: drop 4s linear forwards;
   animation-iteration-count:infinite;
 }
