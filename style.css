@@ -4,6 +4,46 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
+.score {
+  color: white;
+  padding: 10px;
+  visibility: hidden;
+}
+.lifes {
+  color: white;
+  padding: 10px;
+  visibility: hidden;
+}
+.gameOver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: red;
+  font-size: 100px;
+  left: 30%;
+  top: 30%;
+  visibility: hidden;
+  position: absolute;
+}
+.gameFinish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: blue;
+  font-size: 100px;
+  left: 30%;
+  top: 30%;
+  visibility: hidden;
+  position: absolute;
+}
+.box {
+  width: 50vh;
+  background: greenyellow;
+  border: 0.1px solid;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.9);
+  border-radius: 0.2rem;
+  margin-bottom: 16px;
+}
 
 .character {
   background-image: url("img/bin.png");
@@ -12,6 +52,7 @@
   position: absolute;
   top: 85%;
   left: 50%;
+  z-index: 1;
 }
 
 .element{
@@ -20,7 +61,6 @@
   position: absolute;
   top: -10%;
   animation: drop 4s linear forwards;
-  animation-iteration-count:infinite;
 }
 
 @keyframes drop{
